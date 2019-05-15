@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- 웹표준 구현이 가능한 최신 브라우저로 브라우징할 수 있도록 설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    
+    <!-- 스마트기기에서 화면의 크기를 물리적 크기에 맞추어 출력 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <!-- 스마특기기에서 화면을 풀스크린으로 보이기 위한 설정 -->
+    <meta name="mobile-web-app-capable" content="yes"> <!-- 비 ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- ios -->
+    
+    <!-- 웹앱 또는 모바일 웹 사이트 등의 사이트 정보를 기록 -->
+    <meta name="title" content="수원시소개">
+    <meta name="keyword" content="수원시소개, 수원, 수원시, 수원정보, 수원소개, 수원먹거리, 수원관광지">
+    <meta name="description" content="사람이 반갑습니다. 휴먼시티 수원.">
+    <meta name="author" content="Nicole">
+    
+    <!-- 파비콘 설정-->
+    <link rel="icon" href="./image/favicon.ico">
+    <link rel="shorticon icon" href="./image/favicon.png" type="image/x-icon">
+    <!--
+    메타포 아이콘의 크기
+    16X16 24X24 "32X32" 48X48 64X64 72X72 96X96 114X114 128X128 ~ 512X512
+    favicon.png와 favicon.ico로 저장 'convertico검색'
+    -->
+    
+    <!-- 플러그인의 연결방식 CDN,다운로드 받아 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- <script src="../js/jquery-3.4.1.js"></script> -->
+    
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    
+    <link rel="stylesheet" href="fonts.css">
+    
+    <link rel="stylesheet" href="common.css">
+    
+    <title>Welcome Suwon</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    
+</head>
+<body>
+  
+   <!-- <h2>폰트어썸 이용하기</h2>
+    <a href=""><i class="fa fa-home"></i></a>
+    <a href=""><i class="fa fa-bars"></i></a>
+    <h2>XE-ICON 이용하기</h2>
+    <a href=""><i class="xi-share-alt-o"></i></a>
+    <a href=""><i class="xi-home"></i></a> -->
+    
+<!--    <div class="wrapper"></div>-->
+    
+    <input type="checkbox" id="ck1" class="ck_item">
+
+    <div class="container">
+        <header class="hd">
+           <div class="abs_item">
+                   <a href="index%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8.html" class="logo">
+                       <img src="./image/s_long.png" alt="logo">
+                   </a>
+               <label for="ck1" class="lst_btn">목록</label>
+               <label for="ck2" class="share_btn">공유</label>
+           </div>
+        </header>
+        
+        <main class="contents">
+            <ul class="main_box">
+                <li class="item1">
+                    <a href="#">
+                        <img src="./image/m_bg.png" alt="" class="bg">
+                        <img src="./image/s_cha1.png" alt="" class="cha1">
+                        <h3 class="thum_tit">수원시 소개</h3>
+                        <p class="thum_com">사람이 반갑습니다. 휴먼시티 수원</p>
+                    </a>
+                </li>
+                <li class="item2">
+                    <a href="#2">
+                        <h3 class="thum_tit">관광지 & 특산물</h3>
+                        <p class="thum_com"></p>
+                    </a>
+                </li>
+                <li class="item3">
+                    <a href="#3">
+                        <h3 class="thum_tit">커뮤니티</h3>
+                        <p class="thum_com"></p>
+                    </a>
+                </li>
+            </ul>
+                <h2 class="main_tit">수원시 미디어</h2>
+             <div class="mv_box">
+                 <a href="#video_frame">
+                     <img src="image/" alt="">
+                 </a>
+                 <div id="video_frame">
+                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9bU-4d-kRWY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+             </div>
+             
+            <footer class="ft">
+            
+                <ul class="fnb">
+                    <li class="item1"><a href="">이용약관</a></li>
+                    <li class="item2"><a href="">개인정보처리방침</a></li>
+                </ul>
+                <p class="copyright">&copy;All Copyrights by Suwon</p>
+            
+            </footer> 
+            
+        </main>
+              
+    </div>
+    
+<!--    aside.left>nav.gnb>ul>li.dep1.item$*3>label[for=ra$]-->
+    <aside class="left" id="collap">
+      <div class="collap_wrap">
+          
+           <label for="ck1" class="close_btn">닫기</label>
+           <div class="log_box">
+               
+           </div>
+           <div class="breadcrumb">
+               Home
+           </div>
+           
+            <nav class="gnb">
+              
+               <input type="radio" name="rdo" id="ra0" class="ra_item" checked>
+               
+                <ul>
+                   
+                    <li class="dep1 item1">
+    <!--                    input[type=radio][name=rdo]#ra1-->
+                        <input type="radio" name="rdo" id="ra1" class="ra_item">
+                        <label for="ra1">수원시 소개</label>
+                        <ul class="sub">
+    <!--                       ul.sub>li*3>a[href=sub1.html#page$]-->
+                            <li><a href="sub1.html#page1">수원소개</a></li>
+                            <li><a href="sub1.html#page2">수원소식</a></li>
+                            <li><a href="sub1.html#page3">2019 수원</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dep1 item2">
+                        <input type="radio" name="rdo" id="ra2" class="ra_item">
+                        <label for="ra2">관광지 & 특산품</label>
+                        <ul class="sub">
+                            <li><a href="sub2.html#page1">볼거리</a></li>
+                            <li><a href="sub2.html#page2">먹거리</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dep1 item3">
+                        <input type="radio" name="rdo" id="ra3" class="ra_item">
+                        <label for="ra3">커뮤니티</label>
+                        <ul class="sub">
+                            <li><a href="sub3.html#page1">종합민원</a></li>
+                            <li><a href="sub3.html#page2">시민참여</a></li>
+                            <li><a href="sub3.html#page3">정보공개</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+<!--    input[type=checkbox]#ck2.ck_item    -->
+    <input type="checkbox" id="ck2" class="ck_item">
+    
+<!--    div.sns_frame>ul.sns_box>li.item$*4>a>i.xi-    -->
+    <div class="sns_frame">
+        <ul class="sns_box">  
+            <li class="item1">
+                <a href=""><i class="xi-twitter"></i></a>
+            </li>
+            <li class="item2">
+                <a href=""><i class="xi-facebook"></i></a>
+            </li>
+            <li class="item3">
+                <a href=""><i class="xi-instagram"></i></a>
+            </li>
+            <li class="item4">
+                <a href=""><i class="xi-kakaotalk"></i></a>
+            </li>
+        </ul>
+        <label for="ck2" class="ck2_close"></label>
+    </div>
+    
+</body>
+</html>

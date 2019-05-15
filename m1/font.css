@@ -1,0 +1,10 @@
+@charset "utf-8";
+@font-face{
+    font-family: "kc";
+    src: url("./font/Korean_Calligraphy.eot?#iefix") format("ebedded-type"),
+         url("./font/Korean_Calligraphy.woff") format("woff"),
+         url("./font/Korean_Calligraphy.otf") format("opentype"),
+         url("./font/Korean_Calligraphy.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
