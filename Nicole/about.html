@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Nicole</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        .about_box{margin-right: 100px; margin-bottom: 60px;}
+        .about_rating { width: 100%; height:34px; position:relative;
+            border:1px solid #333;}    
+        
+        .rating1 { width:0px; height:34px; background:#7ab9f8; animation:mov1 2s; animation-fill-mode: both; }
+        @keyframes mov1 {
+            0% { width: 0; }
+            100% { width: 80%; }
+        }
+        
+        .rating2 { width:0px; height:34px; background:#2c8; animation:mov2 2s; animation-fill-mode: both; }
+        @keyframes mov2 {
+            0% { width: 0; }
+            100% { width: 70%; }
+        }
+        
+        .rating3 { width:0px; height:34px; background:#bd7bff; animation:mov3 2s; animation-fill-mode: both; }
+        @keyframes mov3 {
+            0% { width: 0; }
+            100% { width: 80%; }
+        }
+        
+        .rating4 { width:0px; height:34px; background:#ffa117; animation:mov4 2s; animation-fill-mode: both; }
+        @keyframes mov4 {
+            0% { width: 0; }
+            100% { width: 60%; }
+        }
+    </style>
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo.png" title="Magnetic" alt="Magnetic"/></a>
+		</div><!-- end logo -->
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html" class="selected">About</a></li>
+				<li><a href="mywork.html">My Work</a></li>
+				<li><a href="https://www.youtube.com/user/dkfzlwl11/featured" target="_blank">YouTube</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+
+		<div class="footer clearfix">
+			<ul class="social clearfix">
+				<li><a href="#" class="dc" data-title="Discord"></a></li>
+				<li><a href="#" class="instagram" data-title="Instagram"></a></li>
+				<li><a href="#" class="twitter" data-title="Twitter"></a></li>
+				<li><a href="#" class="fb" data-title="Facebook"></a></li>
+			</ul><!-- end social -->
+
+			<div class="rights">
+				<p>Copyright © 2019 Nicole.</p>
+				<p>Made by <a href="">Nicole</a></p>
+			</div><!-- end rights -->
+		</div ><!-- end footer -->
+	</header><!-- end header -->
+
+	<section class="main clearfix">
+
+		<section class="top">	
+			<div class="wrapper content_header clearfix">
+				<div class="work_nav">
+							
+					<ul class="btn clearfix">
+						<li><a href="#" class="previous" data-title="Previous"></a></li>
+						<li><a href="index.html" class="grid" data-title="Portfolio"></a></li>
+						<li><a href="#" class="next" data-title="Next"></a></li>
+					</ul>							
+					
+				</div><!-- end work_nav -->
+				<h1 class="title">About</h1>
+			</div>		
+		</section><!-- end top -->
+
+		<section class="wrapper">
+			<div class="content">
+                
+                <div class="about_box">
+                    <h2>photoshop</h2>
+                    <h3>80%</h3>
+                    <div class="about_rating">
+                        <div class="rating1"></div>
+                    </div>
+                </div>
+				
+				<div class="about_box">
+                    <h2>css</h2>
+                    <h3>70%</h3>
+                    <div class="about_rating">
+                        <div class="rating2"></div>
+                    </div>
+                </div>
+                
+                <div class="about_box">
+                    <h2>Designing</h2>
+                    <h3>80%</h3>
+                    <div class="about_rating">
+                        <div class="rating3"></div>
+                    </div>
+                </div>
+                
+                <div class="about_box">
+                    <h2>Jquery</h2>
+                    <h3>60%</h3>
+                    <div class="about_rating">
+                        <div class="rating4"></div>
+                    </div>
+                </div>
+                
+			</div><!-- end content -->
+		</section>
+	</section><!-- end main -->
+	
+</body>
+</html>
