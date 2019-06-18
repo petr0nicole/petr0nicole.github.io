@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Manchester Utd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- 인터넷익스플로러의 최신브라우저인 IE-Edge로 문서 열기 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 계열의 웹앱 설정 -->
+    <meta name="apple-mobile-web-app-title" content="Manchester Utd">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 공통 웹앱 검색엔진의 검색 결과 설정-->
+    <meta name="title" content="Manchester Utd">
+    <meta name="keywords" content="Manchester Utd">
+    <meta name="description" content="Manchester Utd">
+    <!-- SNS에 의한 검색결과 설정 -->
+    <meta itemprop="name" content="ETIQA">
+    <meta itemprop="description" content="Manchester Utd">
+    <meta itemprop="image" content="./img/thumb_sns-300x300.jpg">
+    <!-- 페이스북 연동 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+    <!-- 페이스북, 트위터, 카카오톡의 크롤러 연동 설정 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="Manchester Utd">
+    <meta property="og:url" content="./index.html">
+    <meta property="og:description" content="Manchester Utd">
+    <meta property="og:image" content="./img/thumb_sns-300x300.jpg">
+    <!-- 메타포 아이콘 설정 -->
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-180x180" sizes="180x180" href="./img/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Pen+Script|Noto+Sans+KR|Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--    구글 애널리틱스 주소 연결해주세요-->
+    <link rel="stylesheet" href="common.css"><!-- 모바일 First -->
+    <style>
+/*
+    미디어 기준점
+        모바일(스마트폰) : 767px 이하
+        태블릿 : 786px~959px
+        데스크탑 : 960px 이상
+*/
+    .next_page { position:absolute; z-index:90; bottom:12%; left:calc(80% - 15px); display:block; width:30px; height:90px; background-image:url("./img/next_btn.png"); background-size:30px auto; 
+        background-repeat:no-repeat; cursor:pointer; } 
+    #page5 .next_page { transform:rotate(180deg); }  
+    .page_text { display:block; position:fixed; bottom:2%; left:calc(50% - 100px);  z-index:90; width:200px; height:40px; background:#fff;
+        color:#333; line-height:40px; border-radius:30px; } 
+    .page_comment { display:block; width:150px; height:40px; float:left; 
+        font-size:1.2em; text-indent:1em;  }    
+    .page_num { display:block; float:right; width:40px; height: 40px; 
+        border-radius:30px; background:#ccc; font-size:1.2em; text-align:center; }    
+    @media screen and (max-width:767px){
+        .page_tit { font-size:5em; }
+        .more { font-size:1.4em; }
+        .logo { width:120px; }
+        .menu_call img { width: 20px; }
+        #vdo1 { position:absolute; height: 100vh; }
+        .next_page { display:none; }
+        #page_text { display:none; }
+    }    
+    @media screen and (min-width:768px) and (max-width:959px){ /* 태블릿 */
+        .fnb li a { font-size:2em; }
+        .fnb li a.ad:after { top:-14px; }
+        .fnb li .sub a { font-size:1.4em; }
+
+        .logo { width:160px; }
+        .menu_call img { width: 32px; }
+        .col_menu li { font-size:1.4em; }
+        .col_menu li a { font-size:2em; }
+    }
+    @media screen and (min-width:960px){ /* 데스크탑 */
+        .page_tit { font-size:8em; line-height: 2; }
+        .more { font-size:3em; }
+        .plus { width: 48px; height: 48px; margin-top:10px; }
+        #page1 { background-image:url("./img/bg_sc2.png"); }    
+        #page2 { background-image:url("./img/bg_sc5.png"); }     
+        #page4 { background-image:url("./img/bg_sc4.png"); 
+        background-size:cover; } 
+        #vdo_btn { width: 60px; height: 60px; right:calc(50% - 30px);}
+        .next_page { display:block; }
+        #page_text { display:block; }
+    }    
+    </style>
+    <script>
+    $(document).ready(function(){
+        $(".fnb li a.ad").click(function(){
+           if($(this).hasClass("on")){
+               $(this).removeClass("on"); 
+               $(this).siblings(".sub").slideUp();     
+           } else {
+               $(".fnb li a.ad").removeClass("on");
+               $(".fnb li .sub").css("display", "none");
+               $(this).addClass("on"); 
+               $(this).siblings(".sub").slideDown();
+           }
+        }); 
+        var win_h = $(window).height();
+        var wd = $(window).width();
+        $(".page").each(function(index){ //각 페이지마다 스크롤해야할 양을 지정
+            $(this).attr("data-page", win_h*index);
+        });
+        $(".page").on("mousewheel", function(e){
+            var secPos = parseInt($(this).attr("data-page"));
+            if(e.originalEvent.wheelDelta > 0){ //위로 스크롤할 때
+                $("body, html").not(":animated").animate({scrollTop:secPos - win_h}, 400);
+            } else if(e.originalEvent.wheelDelta < 0){ //아래로 스크롤할 때
+                $("body, html").not(":animated").animate({scrollTop:secPos + win_h}, 400);
+            }
+        });
+        $(".menu_call, .close_btn").click(function(){
+           $(".gnb").toggleClass("on"); 
+        });
+        $(window).scroll(function(){
+            var sc_top = $(window).scrollTop(); //스크롤량 계산
+            if(sc_top>=200){ //스크롤량이 200px이상이면
+                $(".hd").addClass("on");
+                $(".logo_img").attr("src", "./img/img_logo2.png");
+                $(".menu_btn").attr("src", "./img/img_menu2.png");
+            } else {
+                $(".hd").removeClass("on");
+                $(".logo_img").attr("src", "./img/img_logo.png");
+                $(".menu_btn").attr("src", "./img/img_menu.png");
+            }
+        });
+        /* 동영상 일시정지/재생 토글 부분  */
+        var sw1=true;
+        const video = document.querySelector("#vdo1");
+        $("#vdo_btn").click(function(){
+            if(sw1){
+                video.pause();   //동영상이나 사운드 파일 재생 일시정지
+                $("#vdo_btn").addClass("on");
+            } else {
+                video.play();   //동영상이나 사운드 파일 재생
+                $("#vdo_btn").removeClass("on");
+            }
+            sw1 = !sw1;
+        });
+        $(".next_page").click(function(){
+            var np = parseInt($(this).attr("data-target"));
+            $("body, html").not(":animated").animate({scrollTop:np*win_h}, 500);
+        });
+        var sc_txt = ["페이지1 제목", "페이지2 제목", "페이지3 제목", "페이지4 제목"];
+        $(window).resize(function(){
+            wd = $(window).width();
+            if(wd>=960) {
+                $(".page_comment").text(sc_txt[0]);
+                $(".page_num").text(1);        
+                $(window).scroll(function(){
+                    var cur_page = 0;
+                    cur_page = $(window).scrollTop() / win_h;
+                    if(cur_page>=4) {
+                        $(".page_text").fadeOut();
+                    } else {
+                        $(".page_text").fadeIn();
+                        $(".page_comment").text(sc_txt[cur_page]);
+                        $(".page_num").text(parseInt(cur_page+1));
+                    }
+                });
+            } else {
+                $(".page_text").fadeOut();
+            }            
+        }).resize();
+    });    
+    </script>
+</head>
+<body>
+    <div class="page" id="page1">
+        <h2 class="page_tit">Glory</h2>
+        <a href="sub1.html" class="more">
+            <span class="txt">Winning mentality</span><span class="plus"></span>
+        </a>
+        <div class="next_page" data-target="1"></div>
+    </div>
+    <div class="page" id="page2">
+        <h2 class="page_tit">Team</h2>
+        <a href="sub2.html" class="more">
+            <span class="txt">We Won Together</span><span class="plus"></span>
+        </a>
+        <div class="next_page" data-target="2"></div>
+    </div>
+    <div class="page" id="page4">
+        <h2 class="page_tit">Goal</h2>
+        <a href="sub8.html" class="more">
+            <span class="txt">Top Of Clubs</span><span class="plus"></span>
+        </a>
+        <div class="next_page" data-target="4"></div>
+    </div>
+    <div class="page" id="page5">
+        <nav class="fnb">
+            <ul class="fmenu">
+                <li class="item1">
+                    <a class="dp1 ad">History</a>
+                    <ul class="sub">
+                        <li class="sb_item1"><a href="sub1.html">Tropies</a></li>
+                        <li class="sb_item2"><a href="sub2.html">Legends</a></li>
+                    </ul>
+                </li>
+                <li class="item2">
+                    <a class="dp1 ad">Team</a>
+                    <ul class="sub">
+                        <li class="sb_item1"><a href="sub3.html">Man</a></li>
+                        <li class="sb_item2"><a href="sub4.html">Woman</a></li>
+                    </ul>
+                </li>
+                <li class="item3">
+                    <a class="dp1" href="sub5.html">Old Trafford</a>
+                </li>
+                <li class="item4">
+                    <a class="dp1" href="sub6.html">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <hr class="bd">
+        <div class="cp_box">
+            <img src="./img/img_logo.png" alt="하단로고" class="ft_logo">
+            <p class="copyright">COPYRIGHT © 2018 Manchester United. ALL RIGHTS RESERVED.</p>
+        </div>
+        <nav class="sns_link">
+            <ul class="sns_menu">
+                <li class="item1"><a href=""></a></li>
+                <li class="item2"><a href=""></a></li>
+                <li class="item3"><a href=""></a></li>
+                <li class="item4"><a href=""></a></li>
+                <li class="item5"><a href=""></a></li>
+            </ul>
+        </nav>
+        <div class="next_page" data-target="0"></div>
+    </div>
+    <header class="hd">
+        <a href="index.html" class="logo">
+            <img src="./img/img_logo.png" class="logo_img" alt="로고">
+        </a>
+        <label for="ck" class="menu_call">
+            <img src="./img/img_menu.png" class="menu_btn" alt="메뉴호출버튼">
+        </label>
+    </header>
+    <nav class="gnb">
+        <a href="index.html" class="col_logo">
+            <img src="./img/img_logo2.png" class="col_logo_img" alt="컬랩로고">
+        </a>
+        <label for="ck" class="close_btn">
+            <img src="./img/menu_close.png" alt="닫기버튼">
+        </label>
+        <div class="wd_box">
+        </div>
+        <ul class="col_menu">
+            <li class="item1 split">HISTORY</li>
+            <li class="item2"><a href="sub1.html">TROPIES</a></li>
+            <li class="item3"><a href="sub2.html">LEGENDS</a></li>
+            <li class="item4 split">TEAM</li>
+            <li class="item5"><a href="sub3.html">MAN</a></li>
+            <li class="item6"><a href="sub4.html">WOMAN</a></li>
+            <li class="item7 split"></li>
+            <li class="item8"><a href="sub5.html">OLD TRAFFORD</a></li>
+            <li class="item9"><a href="sub6.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="page_text" id="page_text">
+        <span class="page_comment"></span>
+        <span class="page_num"></span>
+    </div>
+</body>
+</html>
