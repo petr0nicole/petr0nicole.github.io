@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <title>모아</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+    @keyframes pic_ani1 {
+        0% { opacity:0; }
+        100% { opacity:1; }
+    }    
+    .mobile { display:none; } 
+    </style>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:767px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:1024px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:1025px)">
+    <style>
+    /* 브랜드 소개 스타일 */
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="main.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".to_top").fadeOut();
+        $(window).scroll(function(){
+            var sc_top = $(window).scrollTop(); 
+            if(sc_top>=300) {
+                $(".to_top").fadeIn();
+            } else {
+                $(".to_top").fadeOut();
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+    <input type="checkbox" class="ck_item" id="lst_ck">
+    <input type="checkbox" class="ck_item" id="search_ck">
+    <header class="page hd" id="main">
+        <a href="index.html" class="logo"></a>
+        <nav id="gnb">
+            <h3 class="mobile mob_title1">MENU</h3>
+            <ul class="mn">
+                <li class="item1"><a href="new.html">NEW</a></li>
+                <li class="item2"><a href="brand.html">BRAND</a></li>
+                <li class="item3"><a href="product.html">PRODUCT</a></li>
+                <li class="item4"><a href="store.html">STORE</a></li>
+            </ul>
+            <label for="lst_ck" class="mobile close_btn"></label>
+        </nav>
+        <nav id="tnb">
+            <ul class="mn">
+                <li class="item1">
+                    <a href="" class="dp1">KO</a>
+                    <ul class="col_sub">
+                        <li class="it1"><a href="index.html">KO</a></li>
+                        <li class="it2"><a href="index_en.html">EN</a></li>
+                        <li class="it3"><a href="index_cn.html">CN</a></li>
+                    </ul>
+                </li>
+                <li class="item2"><a href="product.html" class="search_btn"></a></li>
+            </ul>
+        </nav>
+        <ul class="vs_btn_box desk">
+            <li class="item1"><button class="on">01</button></li>
+            <li class="divider"></li>
+            <li class="item2"><button>02</button></li>
+        </ul>
+        <nav class="mobile search">
+            <h3 class="mob_title1">SEARCH</h3>
+            <form action="">
+                <input type="text" id="keywords" class="input_data">
+                <input type="submit" id="sub_btn" class="sub_btn">
+            </form>
+            <h4 class="mob_title2">주요 검색어</h4>
+            <ul class="mob_menu">
+                <li class="item1"><a href="">미스트</a></li>
+                <li class="item2"><a href="">피부장벽</a></li>
+                <li class="item3"><a href="">안티에이징</a></li>
+                <li class="item4"><a href="">전초 컨센트레이트</a></li>
+                <li class="item5"><a href="">유수분밸런스</a></li>
+            </ul>
+            <label for="search_ck" class="close_btn"></label>
+        </nav>
+        <label for="lst_ck" class="mobile lst_btn"></label>
+        <label for="search_ck" class="mobile search_btn"></label>
+    </header>
+    <div class="page" id="page1">
+        <h3 class="page_t1">브랜드 소개1</h3>
+        <p class="page_com1">브랜드 소개 설명부분2</p>
+    </div>
+    <div class="page" id="page2">
+        <h3 class="page_t1">브랜드 소개2</h3>
+        <p class="page_com1">브랜드 소개 설명부분2</p>
+    </div>
+    <div class="page" id="page3">
+        <h3 class="page_t1">브랜드 소개3</h3>
+        <p class="page_com1">브랜드 소개 설명부분3</p>
+    </div>
+    <div class="page" id="page4">
+        <div id="img_sl">
+        <input type="radio" class="ra_item" id="ra1" name="ra_item1" checked>
+        <input type="radio" class="ra_item" id="ra2" name="ra_item1">
+        <input type="radio" class="ra_item" id="ra3" name="ra_item1">
+        <input type="radio" class="ra_item" id="ra4" name="ra_item1">
+            <ul class="lb_box">
+                <li class="item1">
+                    <label for="ra1">브랜드 이야기</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">전초 에센셜 크림</h2>
+                        <p class="item_com">속부터 탄탄하고 견고한 피부 장벽을 세워
+                        온전한 균형을 오래 유지시켜주는 <br>
+                        데일리 크림</p>
+                    </div>
+                </li>
+                <li class="item2">
+                    <label for="ra2">브랜드 역사</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">전초 에센셜 토너</h2>
+                        <p class="item_com">즉각적 보습과 풍부한 에센스 성분으로 <br>
+                        피부를 벨벳처럼 매끈하게 정돈하고 <br>
+                        다음 단계 스킨 케어의 흡수와 효과를 <br>
+                        상승시키는 데일리 토너</p>
+                    </div>
+                </li>
+                <li class="item3">
+                    <label for="ra3">브랜드 공장</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">자목숙<br>퍼밍 앤 너리싱 마스크</h2>
+                        <p class="item_com">최적화된 3단계 제형 변화의 감각적 경험과 <br>
+                        깊은 영양으로 즉각적 피부 변화를 <br>
+                        선사하는 마일드 온열 마스크</p>
+                    </div>
+                </li>
+                <li class="item4">
+                    <label for="ra4">브랜드 조직</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">백년초 &amp; 우질두<br>수분 진정 미스트</h2>
+                        <p class="item_com">오랜 수분공급 효과로 건조한 피부를 <br>
+                        촉촉하게 적셔 주는 고지속 수분 미스트</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pic_box">
+                <li class="item1"><a href=""><img src="./images/pro01.png" alt="전초 에센셜 크림"></a></li>
+                <li class="item2"><a href=""><img src="./images/pro02.png" alt="전초 에센셜 토너"></a></li>
+                <li class="item3"><a href=""><img src="./images/pro03.png" alt="자목숙 퍼밍 앤 너리싱 마스크"></a></li>
+                <li class="item4"><a href=""><img src="./images/pro04.png" alt="백년초 & 우질두 수분 진정 미스트"></a></li>
+                <li class="item1"><a href=""><img src="./images/pro01.png" alt="전초 에센셜 크림"></a></li>
+                <li class="item2"><a href=""><img src="./images/pro02.png" alt="전초 에센셜 토너"></a></li>
+                <li class="item3"><a href=""><img src="./images/pro03.png" alt="자목숙 퍼밍 앤 너리싱 마스크"></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="page" id="ft">
+        <nav id="fnb">
+            <ul class="mn">
+                <li class="item1"><a href="sitemap.html">SITEMAP</a></li>
+                <li class="item2"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile sns_link">
+            <ul class="sns">
+                <li class="item1"><a href=""></a></li>
+                <li class="item2"><a href=""></a></li>
+                <li class="item3"><a href=""></a></li>
+            </ul>
+        </nav>
+        <p class="copyright">
+            <span class="txt1">(주)신세계인터내셔날</span>
+            <span class="txt1">대표이사: 차정호</span>
+            <span class="txt1">주소 : 서울특별시 강남구 도산대로 449 (청담동)</span>
+            <span class="txt1">대표전화 : 1644-4490</span>
+            <span class="txt1">&copy; 2018 SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED</span>
+        </p>
+    </footer>
+    <a href="#" class="to_top"></a>
+</body>
+</html>

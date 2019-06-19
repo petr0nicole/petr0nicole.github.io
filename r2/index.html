@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <title>모아</title>
+    <style>
+    @keyframes pic_ani1 {
+        0% { opacity:0; }
+        100% { opacity:1; }
+    }    
+    .mobile { display:none; } 
+    </style>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:767px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:1024px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:1025px)">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="main.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".to_top").fadeOut();
+        $(window).scroll(function(){
+            var sc_top = $(window).scrollTop(); 
+            if(sc_top>=300) {
+                $(".to_top").fadeIn();
+            } else {
+                $(".to_top").fadeOut();
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+    <input type="checkbox" class="ck_item" id="lst_ck">
+    <input type="checkbox" class="ck_item" id="search_ck">
+    <header class="page hd" id="main">
+        <a href="index.html" class="logo"></a>
+        <nav id="gnb">
+            <h3 class="mobile mob_title1">MENU</h3>
+            <ul class="mn">
+                <li class="item1"><a href="new.html">SHOP</a></li>
+                <li class="item2"><a href="brand.html">BRAND</a></li>
+                <li class="item3"><a href="product.html">ILLUST</a></li>
+                <li class="item4"><a href="store.html">CONTACT</a></li>
+            </ul>
+            <label for="lst_ck" class="mobile close_btn"></label>
+        </nav>
+        <nav id="tnb">
+            <ul class="mn">
+                <li class="item1">
+                    <a href="" class="dp1">KO</a>
+                    <ul class="col_sub">
+                        <li class="it1"><a href="index.html">KO</a></li>
+                        <li class="it2"><a href="index_en.html">EN</a></li>
+                        <li class="it3"><a href="index_cn.html">CN</a></li>
+                    </ul>
+                </li>
+                <li class="item2"><a href="product.html" class="search_btn"></a></li>
+            </ul>
+        </nav>
+        <ul class="vs_btn_box desk">
+            <li class="item1"><button class="on">01</button></li>
+            <li class="divider"></li>
+            <li class="item2"><button>02</button></li>
+        </ul>
+        <nav class="mobile search">
+            <h3 class="mob_title1">SEARCH</h3>
+            <form action="">
+                <input type="text" id="keywords" class="input_data">
+                <input type="submit" id="sub_btn" class="sub_btn">
+            </form>
+            <h4 class="mob_title2">주요 검색어</h4>
+            <ul class="mob_menu">
+                <li class="item1"><a href="">일러스트</a></li>
+                <li class="item2"><a href="">디자인</a></li>
+                <li class="item3"><a href="">모아</a></li>
+                <li class="item4"><a href="">모아멜로우</a></li>
+            </ul>
+            <label for="search_ck" class="close_btn"></label>
+        </nav>
+        <label for="lst_ck" class="mobile lst_btn"></label>
+        <label for="search_ck" class="mobile search_btn"></label>
+    </header>
+    <div class="page" id="page1">
+        <ul class="column">
+            <li class="item1">
+                <img src="./images/section1_img3.jpg" alt="2페이지3" class="pic page_img3">
+            </li>
+            <li class="item2">
+                <h4 class="page_tit1">MOA MELLOW</h4>
+                <h2 class="page_tit2">모아의 커미션</h2>
+                <p class="page_com">모아멜로우의 깔끔하고 귀여운<br>일러스트를 커미션신청해 보세요!</p>
+                <a href="brand.html" class="page_more"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="page" id="page2">
+        <ul class="column">
+            <li class="item1">
+                <h4 class="page_tit1">MOA MELLOW</h4>
+                <h2 class="page_tit2">모아의 최신상품</h2>
+                <p class="page_com">독창적인 스타일을 원하신다면<br>최신유행의 모아슈즈</p>
+                <a href="new.html" class="page_more"></a>
+            </li>
+            <li class="item2">
+                <img src="./images/section2_img2.jpg" alt="" class="pic page_img2">
+            </li>
+        </ul>
+    </div>
+    <div class="page" id="page3">
+        <h3 class="page_t1">모아멜로우의 일러스트</h3>
+        <p class="page_com1">깔끔한 색채와 귀여운 그림을 구경해보세요.</p>
+    </div>
+    <div class="page" id="page4">
+        <div id="img_sl">
+        <input type="radio" class="ra_item" id="ra1" name="ra_item1" checked>
+        <input type="radio" class="ra_item" id="ra2" name="ra_item1">
+        <input type="radio" class="ra_item" id="ra3" name="ra_item1">
+        <input type="radio" class="ra_item" id="ra4" name="ra_item1">
+            <ul class="lb_box">
+                <li class="item1">
+                    <label for="ra1">모아 빈티지 캔버스</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">모아 빈티지 캔버스</h2>
+                        <p class="item_com">심플하지만 고풍스러운 느낌이 드는<br>빈티지 스타일 캔버스</p>
+                    </div>
+                </li>
+                <li class="item2">
+                    <label for="ra2">모아 플라워 패턴</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">모아 플라워 패턴</h2>
+                        <p class="item_com">일본식의 꽃 문양을 반복하는<br>
+                        아름다운 향기가 날것같은 패턴</p>
+                    </div>
+                </li>
+                <li class="item3">
+                    <label for="ra3">모아 일러스트</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">모아 일러스트</h2>
+                        <p class="item_com">인기 작가 모아멜로우의<br>
+                        일러스트를 감상해보세요!</p>
+                    </div>
+                </li>
+                <li class="item4">
+                    <label for="ra4">모아 컬러풀 캔버스</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">모아 컬러풀 캔버스</h2>
+                        <p class="item_com">알록달록한 색 분배로<br>
+                        눈에 띄는 캔버스!</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pic_box">
+                <li class="item1"><a href=""><img src="./images/pro01.png" alt=""></a></li>
+                <li class="item2"><a href=""><img src="./images/pro02.png" alt=""></a></li>
+                <li class="item3"><a href=""><img src="./images/pro03.png" alt=""></a></li>
+                <li class="item4"><a href=""><img src="./images/pro04.png" alt=""></a></li>
+                <li class="item1"><a href=""><img src="./images/pro01.png" alt=""></a></li>
+                <li class="item2"><a href=""><img src="./images/pro02.png" alt=""></a></li>
+                <li class="item3"><a href=""><img src="./images/pro03.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="page" id="ft">
+        <nav id="fnb">
+            <ul class="mn">
+                <li class="item2"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile sns_link">
+            <ul class="sns">
+                <li class="item1"><a href=""></a></li>
+                <li class="item2"><a href=""></a></li>
+                <li class="item3"><a href=""></a></li>
+            </ul>
+        </nav>
+        <p class="copyright">
+            <span class="txt1">(주)Nicole</span>
+            <span class="txt1">대표이사: 정회민</span>
+            <span class="txt1">주소 : 대전광역시 노은동</span>
+            <span class="txt1">대표전화 : 5596-9960</span>
+            <span class="txt1">&copy; 2018 MOA MELLOW. ALL RIGHTS RESERVED</span>
+        </p>
+    </footer>
+    <a href="#" class="to_top"></a>
+</body>
+</html>
