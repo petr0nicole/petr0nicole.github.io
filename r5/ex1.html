@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>레이아웃 예시</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width: 100%; }
+    ul { list-style:none; }
+    a { text-decoration:none; }
+    .pro_box { clear:both; width:1080px; margin:0 auto; } 
+    .pro_box li { float:left;  clear:none; margin:20px;   }  
+    .pic_box { position:relative; clear:both; margin:20px auto; 
+        width:100%; } 
+    .pic { display:block; width:300px; margin:20px auto; }    
+    .tit_box { position:absolute; bottom:0; left:0; z-index:5; 
+        text-align:center;l } 
+    .pic_logo { }    
+    @media screen and (max-width:767px){
+        .pro_box { width:100%; }
+        .pro_box li { clear:both; float:none; margin:0; }
+        .pic_box { width:100vw; }
+        .pic { width:90%;      }
+    }    
+    </style>
+</head>
+<body>
+    <ul class="pro_box">
+        <li class="item1">
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명1</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명2</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명3</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명4</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+        </li>
+        <li class="item2">
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명5</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명6</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명7</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명8</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+        </li>
+        <li class="item3">
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명9</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명10</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명11</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+            <div class="pic_box">
+                <img src="https://placehold.it/300x550/333" alt="" class="pic">
+                <div class="tit_box">
+                    <img src="https://placehold.it/120x42" alt="" class="pic_logo">
+                    <p class="pro_com">상품설명12</p>
+                    <a href="" class="more">자세히</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
