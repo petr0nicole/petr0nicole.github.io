@@ -50,6 +50,21 @@
     
     <link rel="stylesheet" href="common.css">
     
+    <style>
+        
+        .contents_frame{ width: 100%; height: 100%;}
+        .page{ width: 100%; padding-top: 0px; }
+
+        .tb_btn{ display: block; width: 33.3333%; line-height: 40px; text-align: center; color: #fff; font-size: 1.1em; position: absolute; top: 0px; z-index: ; background: #333; text-decoration: none; padding-top: 60px;}
+        
+        #page1 .tb_btn{ left: 0;}
+        #page2 .tb_btn{ left: 33.3333%;}
+        #page3 .tb_btn{ left: 66.6666%;}
+        .page .tb_data{ display: none;}
+        .page:target .tb_data{ display: block; padding-top: 120px;}
+        .page:target .tb_btn{ background: #2c8; color: #fff; text-decoration: none; border-bottom: 0;}
+        
+    </style>
 </head>
 <body>
   
@@ -76,50 +91,26 @@
         </header>
         
         <main class="contents">
-            <ul class="main_box">
-                <li class="item1">
-                    <a href="sub1.html">
-                        <img src="./image/m_bg.png" alt="" class="bg">
-                        <img src="./image/s_cha1.png" alt="" class="cha1">
-                        <h3 class="thum_tit">수원시 소개</h3>
-                        <p class="thum_com">사람이 반갑습니다. 휴먼시티 수원</p>
-                    </a>
-                </li>
-                <li class="item2">
-                    <a href="sub2.html">
-                        <img src="./image/s_tour.png" alt="" width="140px" height="auto">
-                        <h3 class="thum_tit">관광지 & 특산물</h3>
-                        <p class="thum_com"></p>
-                    </a>
-                </li>
-                <li class="item3">
-                    <a href="sub3.html">
-                        <img src="./image/multi_u.png" alt="" width="100px" height="auto">
-                        <h3 class="thum_tit">커뮤니티</h3>
-                        <p class="thum_com"></p>
-                    </a>
-                </li>
-            </ul>
-                <h2 class="main_tit">수원시 미디어</h2>
-             <div class="mv_box">
-                 <a href="#video_frame">
-                     <img src="image/" alt="">
-                 </a>
-                 <div id="video_frame">
-                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9bU-4d-kRWY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                 </div>
-             </div>
-             
-            <footer class="ft">
-            
-                <ul class="fnb">
-                    <li class="item1"><a href="">이용약관</a></li>
-                    <li class="item2"><a href="">개인정보처리방침</a></li>
-                </ul>
-                <p class="copyright">&copy;All Copyrights by Suwon</p>
-            
-            </footer> 
-            
+           <div class="contents_frame">
+               <div class="page" id="page1">
+                   <a href="#page1" class="tb_btn">종합민원</a>
+                   <div class="tb_data">
+                       <img src="http://placehold.it/300x200/333" alt="">
+                   </div>
+               </div>
+               <div class="page" id="page2">
+                   <a href="#page2" class="tb_btn">시민참여</a>
+                   <div class="tb_data">
+                       <img src="http://placehold.it/300x200/3c8" alt="">
+                   </div>
+               </div>
+               <div class="page" id="page3">
+                   <a href="#page3" class="tb_btn">정보공개</a>
+                   <div class="tb_data">
+                       <img src="http://placehold.it/300x200/c38" alt="">
+                   </div>
+               </div>
+           </div>
         </main>
               
     </div>
@@ -129,11 +120,11 @@
       <div class="collap_wrap">
           
            <label for="ck1" class="close_btn">닫기</label>
-            <a href="login.html">
+           <a href="login.html">
                <div class="log_box"></div>
             </a>
            <div class="breadcrumb">
-               Home
+               커뮤니티
            </div>
            
             <nav class="gnb">
