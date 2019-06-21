@@ -4,6 +4,6 @@
     background-image:url("./images/btn_gnb.png"); background-position:center center; background-repeat: no-repeat; background-size:20px auto; margin-top: 15px; margin-left:15px; float:left; }
 .hd { position:fixed; top: 0; left: 0; z-index:99; transition: 0.5s; width:100%; height:70px; background-color: transparent; }
 .hd.on { background-color:#fff; }    
-.logo { display:block; width: 90px; height:50px; margin-top:10px; float:left; margin-left:80px; background-image:url("./images/logo.png"); background-size:100% auto; 
-    background-position:bottom; }    
-.hd.on .logo { background-position:top; }  
+.logo { display:block; width: 90px; height:50px; margin-top:10px; margin-left:80px; background-image:url("./images/logo.png"); background-size:100% auto; 
+    background-position:bottom; margin: 0 auto;}    
+.hd.on .logo { background-position:top;} 
