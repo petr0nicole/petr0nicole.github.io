@@ -4,7 +4,7 @@
 .hd { position:relative; }  
 #main { background-size:cover; background-repeat:no-repeat; 
     background-image:url("./images/page1.jpg"); 
-    background-position:center center; }
+    background-position:center top; }
 .logo { display:block; width: 152px; height: 32px; 
     background-image:url("./images/logo-wh.png"); 
     background-repeat:no-repeat; background-size:cover; 
@@ -52,7 +52,7 @@
     background-repeat:no-repeat; margin-left:15px; margin-top:5px; }
 .vs_btn_box { position:absolute; right:5%; top:45%; width:200px; }
 .vs_btn_box li { float:left; height:40px; }
-.vs_btn_box li button { color:#555; width:46px; height:40px; font-size:1.1em; 
+.vs_btn_box li button { color:#ccc; width:46px; height:40px; font-size:1.1em; 
     text-align:center; line-height:34px; font-weight:bold; cursor:pointer; border:3px solid transparent; border-radius:30px; }
 .vs_btn_box li.divider { width:100px; height:1px; background:#fff; 
     margin:0 auto; margin-top: 19px; }    
