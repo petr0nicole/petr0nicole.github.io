@@ -70,11 +70,6 @@ $(document).ready(function(){
         var tooltip = $(".tooltip");       
         tooltip.remove();
     });
-
+    
 
 });
-
-
-
-
-
