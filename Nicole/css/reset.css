@@ -17,6 +17,10 @@
         font-size:100%;
         vertical-align:baseline;
         background:transparent;
+        -ms-overflow-style: none;
+    }
+    ::-webkit-scrollbar {
+        display:none;
     }
 
     body {
