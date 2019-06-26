@@ -22,6 +22,7 @@
     ::-webkit-scrollbar {
         display:none;
     }
+    /*    스크롤바 없애기*/
 
     body {
         line-height:1;
